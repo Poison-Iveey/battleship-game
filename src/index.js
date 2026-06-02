@@ -4,13 +4,18 @@ import { renderBoard } from './modules/dom.js';
 
 import confetti from 'canvas-confetti';
 
-import hitSoundFile from './assets/sounds/hit.mp3';
-import sunkSoundFile from './assets/sounds/hit.mp3';
-import winSoundFile from './assets/sounds/win.mp3';
-import loseSoundFile from './assets/sounds/lose.mp3';
-import bgMusicFile from './assets/sounds/bgm.mp3';
+import hitMp3 from './assets/sounds/hit.mp3';
+import sunkMp3 from './assets/sounds/hit.mp3';
+import winMp3 from './assets/sounds/win.mp3';
+import loseMp3 from './assets/sounds/lose.mp3';
+import bgMusicMp3 from './assets/sounds/bgm.mp3';
 
-const bgMusic = new Audio(bgMusicFile);
+console.log('hit:', hitMp3);
+console.log('win:', winMp3);
+console.log('lose:', loseMp3);
+console.log('bgm:', bgMusicMp3);
+
+const bgMusic = new Audio(bgMusicMp3);
 
 bgMusic.loop = true;
 bgMusic.volume = 0.3;
@@ -25,13 +30,13 @@ let gameOver = false;
 
 let difficulty = "easy";
 
-const hitSound = new Audio(hitSoundFile);
+const hitSound = new Audio(hitMp3);
 
-const sunkSound = new Audio(sunkSoundFile);
+const sunkSound = new Audio(sunkMp3);
 
-const winSound = new Audio(winSoundFile);
+const winSound = new Audio(winMp3);
 
-const loseSound = new Audio(loseSoundFile);
+const loseSound = new Audio(loseMp3);
 
 
 // UI HELPERS
