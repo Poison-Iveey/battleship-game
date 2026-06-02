@@ -10,6 +10,7 @@ export default {
     filename: 'main.js',
     path: path.resolve('dist'),
     clean: true,
+    publicPath: '/battleship-game'
   },
 
   devServer: {
