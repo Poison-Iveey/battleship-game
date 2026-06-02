@@ -36,6 +36,7 @@ export function renderBoard(board, container, onAttack = null, clickable = true,
 
     if (missed) {
       cell.classList.add('miss');
+      cell.innerHTML = '🌊';
     }
 
     // CHECK HITS
@@ -44,7 +45,8 @@ export function renderBoard(board, container, onAttack = null, clickable = true,
     );
 
     if (hit) {
-      cell.classList.add('hit');
+     cell.classList.add('hit');
+     cell.innerHTML = '💥';
     }
 
     // CLICK EVENT

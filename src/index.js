@@ -8,6 +8,12 @@ import hitSoundFile from './assets/sounds/hit.mp3';
 import sunkSoundFile from './assets/sounds/hit.mp3';
 import winSoundFile from './assets/sounds/win.mp3';
 import loseSoundFile from './assets/sounds/lose.mp3';
+import bgMusicFile from './assets/sounds/bgm.mp3';
+
+const bgMusic = new Audio(bgMusicFile);
+
+bgMusic.loop = true;
+bgMusic.volume = 0.3;
 
 const human = new Player();
 
@@ -76,11 +82,40 @@ function showWinner(winner) {
     }
 }
 
+function fadeOutMenuMusic() {
+
+  const fade = setInterval(() => {
+
+    if (bgMusic.volume > 0.05) {
+
+      bgMusic.volume -= 0.05;
+
+    } else {
+
+      bgMusic.pause();
+      bgMusic.currentTime = 0;
+
+      clearInterval(fade);
+
+    }
+
+  }, 100);
+
+}
+
 // START GAME
 
 function startGame(level) {
 
+    fadeOutMenuMusic();
+
+
     difficulty = level;
+
+    hitSound.load();
+    sunkSound.load();
+    winSound.load();
+    loseSound.load();
 
     document
         .getElementById("start-screen")
@@ -97,6 +132,8 @@ function startGame(level) {
     updateTurnMessage("Your Turn");
 
     initializeGame();
+
+    bgMusic.play().catch(() => {});
 }
 
 // INITIALIZE GAME
@@ -378,7 +415,15 @@ document.addEventListener(
     }
 );
 
+function startMenuMusic() {
+    bgMusic.play().catch(() => {
+        console.log("Music blocked until user interaction");
+    });
+}
 
+document.addEventListener(
+    "click", startMenuMusic, { once: true }
+);
 
 
 
