@@ -6,7 +6,7 @@ import confetti from 'canvas-confetti';
 
 import hitMp3 from './assets/sounds/hit.mp3';
 import sunkMp3 from './assets/sounds/hit.mp3';
-import winMp3 from './assets/sounds/win.mp3';
+import winMp3 from './assets/sounds/win_v2.mp3';
 import loseMp3 from './assets/sounds/lose.mp3';
 import bgMusicMp3 from './assets/sounds/bgm.mp3';
 
