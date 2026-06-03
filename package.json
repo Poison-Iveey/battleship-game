@@ -2,6 +2,7 @@
   "name": "battleship-project",
   "version": "1.0.0",
   "main": "index.js",
+  "homepage":"https://poison-iveey.github.io/battleship-game/",
   "scripts": {
     "test": "jest",
     "start": "webpack serve --open",
