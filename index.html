@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚢 Battleship</title>
+<script defer src="/battleship-game/main.js"></script></head>
+<body>
+
+    <div id="start-screen">
+
+        <h1 class="game-title">BATTLESHIP</h1>
+
+        <div class="difficulty-buttons">
+            <button id="easy-btn">EASY</button>
+            <button id="medium-btn">MEDIUM</button>
+            <button id="hard-btn">HARD</button>
+        </div>
+
+        <div class="game-instructions">
+        <h3>How to Play</h3>
+
+        <p>
+          🚢 Sink all enemy ships before they sink yours!
+        </p>
+
+        <p>
+         🎯 Click squares on the enemy board to attack.
+        </p>
+
+        <p>
+       💥 Red = Hit &nbsp;&nbsp; 🌊 White = Miss
+        </p>
+
+       <p>
+       🏆 Destroy every enemy ship to win the battle.
+       </p>
+       </div>
+
+       </div>
+
+
+    <div id="game-screen" class="hidden">
+
+        <div class="top-bar">
+
+            <h1>BATTLESHIP</h1>
+
+            <div id="turn-message">
+                Your Turn
+            </div>
+
+    <div id="winner-overlay" class="hidden">
+        <div class="winner-content">
+
+          <h1 id="winner-text"></h1>
+
+          <button id="play-again-btn">
+      Play Again
+          </button>
+
+        </div>
+    </div>
+
+
+        <div class="boards-container">
+
+            <div class="board-section">
+
+                <h2>Your Board</h2>
+                <div id="player-board" class="board"></div>
+
+            </div>
+
+
+            <div class="board-section">
+
+                <h2>Enemy Board</h2>
+                <div id="computer-board" class="board"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="controls">
+
+            <button id="rotate-button">
+                Rotate Ship
+            </button>
+
+            <button id="restart-button">
+                Restart Game
+            </button>
+
+        </div>
+
+
+        <div id="game-status">
+            Place your ships to begin.
+        </div>
+
+    </div>
+
+</body>
+</html>
